@@ -6,6 +6,7 @@
     { "type": "wokwi-breadboard", "id": "bb1", "top": -99, "left": -6.8, "attrs": {} },
     { "type": "wokwi-arduino-uno", "id": "uno", "top": -95.4, "left": -317.4, "attrs": {} },
     { "type": "wokwi-led", "id": "led1", "top": 6, "left": 42.2, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led2", "top": 6, "left": 99.8, "attrs": { "color": "red" } },
     {
       "type": "wokwi-resistor",
       "id": "r1",
@@ -13,16 +14,45 @@
       "left": 37.85,
       "rotate": 90,
       "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -14.4,
+      "left": 95.45,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    },
+    { "type": "wokwi-led", "id": "led3", "top": 6, "left": 71, "attrs": { "color": "yellow" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -14.4,
+      "left": 66.65,
+      "rotate": 90,
+      "attrs": { "value": "220" }
     }
   ],
   "connections": [
     [ "uno:GND.2", "bb1:bn.1", "black", [ "v57.5", "h128.7", "v-56.3" ] ],
     [ "bb1:5b.j", "bb1:bn.3", "black", [ "v0" ] ],
+    [ "bb1:11b.j", "bb1:bn.8", "black", [ "v0" ] ],
     [ "bb1:6t.a", "uno:2", "magenta", [ "v-86.4", "h-144" ] ],
+    [ "bb1:9t.a", "uno:3", "gold", [ "v-96", "h-186.4" ] ],
+    [ "bb1:12t.a", "uno:4", "green", [ "v-105.6", "h-224.7" ] ],
+    [ "bb1:8b.j", "bb1:bn.5", "black", [ "v0" ] ],
     [ "led1:A", "bb1:6b.i", "", [ "$bb" ] ],
     [ "led1:C", "bb1:5b.i", "", [ "$bb" ] ],
+    [ "led2:A", "bb1:12b.i", "", [ "$bb" ] ],
+    [ "led2:C", "bb1:11b.i", "", [ "$bb" ] ],
     [ "r1:1", "bb1:6t.b", "", [ "$bb" ] ],
-    [ "r1:2", "bb1:6b.f", "", [ "$bb" ] ]
+    [ "r1:2", "bb1:6b.f", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:12t.b", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:12b.f", "", [ "$bb" ] ],
+    [ "led3:A", "bb1:9b.i", "", [ "$bb" ] ],
+    [ "led3:C", "bb1:8b.i", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:9t.b", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:9b.f", "", [ "$bb" ] ]
   ],
   "dependencies": {}
 }
